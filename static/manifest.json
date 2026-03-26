@@ -1,0 +1,24 @@
+{
+  "name": "Glide Video Tools",
+  "short_name": "Glide Video",
+  "description": "Professional video tools that run on your computer",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#09090B",
+  "theme_color": "#8B5CF6",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "https://assets.floot.app/41577a29-e7b2-4272-98bb-7783a7532545/5b6ac031-bc5a-44dc-9c4c-dc77cf3cd38a.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://assets.floot.app/41577a29-e7b2-4272-98bb-7783a7532545/758b5707-9800-4f02-8cd6-8d5acb7c9c32.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
