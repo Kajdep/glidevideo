@@ -4,7 +4,6 @@ import { Globe, Download } from 'lucide-react';
 import { Button } from '../components/Button';
 import { ProductLayout } from '../components/ProductLayout';
 import { VimeoSquarePlayer } from '../components/VimeoSquarePlayer';
-import styles from './glideblend.module.css';
 
 export default function GlideBlendPage() {
   const actions = (

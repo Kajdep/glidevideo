@@ -13,6 +13,8 @@ import Page_4 from "./pages/glideshorts.tsx";
 import PageLayout_4 from "./pages/glideshorts.pageLayout.tsx";
 import Page_5 from "./pages/glideconvert.tsx";
 import PageLayout_5 from "./pages/glideconvert.pageLayout.tsx";
+import Page_6 from "./pages/glidecaps.tsx";
+import PageLayout_6 from "./pages/glidecaps.pageLayout.tsx";
 
 if (!window.requestIdleCallback) {
   window.requestIdleCallback = (cb) => {
@@ -22,7 +24,7 @@ if (!window.requestIdleCallback) {
 
 import "./base.css";
 
-const fileNameToRoute = new Map([["./pages/_index.tsx","/"],["./pages/glideprep.tsx","/glideprep"],["./pages/glideblend.tsx","/glideblend"],["./pages/glidelooper.tsx","/glidelooper"],["./pages/glideshorts.tsx","/glideshorts"],["./pages/glideconvert.tsx","/glideconvert"]]);
+const fileNameToRoute = new Map([["./pages/_index.tsx","/"],["./pages/glideprep.tsx","/glideprep"],["./pages/glideblend.tsx","/glideblend"],["./pages/glidelooper.tsx","/glidelooper"],["./pages/glideshorts.tsx","/glideshorts"],["./pages/glideconvert.tsx","/glideconvert"],["./pages/glidecaps.tsx","/glidecaps"]]);
 const fileNameToComponent = new Map([
     ["./pages/_index.tsx", Page_0],
 ["./pages/glideprep.tsx", Page_1],
@@ -30,6 +32,7 @@ const fileNameToComponent = new Map([
 ["./pages/glidelooper.tsx", Page_3],
 ["./pages/glideshorts.tsx", Page_4],
 ["./pages/glideconvert.tsx", Page_5],
+["./pages/glidecaps.tsx", Page_6],
   ]);
 
 function makePageRoute(filename: string) {
@@ -136,6 +139,7 @@ export function App() {
 "./pages/glidelooper.tsx": PageLayout_3,
 "./pages/glideshorts.tsx": PageLayout_4,
 "./pages/glideconvert.tsx": PageLayout_5,
+"./pages/glidecaps.tsx": PageLayout_6,
 }), fileNameToRoute, makePageRoute })} 
           <Route path="*" element={<NotFound />} />
         </Routes>

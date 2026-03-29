@@ -1,49 +1,41 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { Download, ShoppingBag } from 'lucide-react';
+import { Download } from 'lucide-react';
 import { Button } from '../components/Button';
 import { ProductLayout } from '../components/ProductLayout';
 import { VimeoSquarePlayer } from '../components/VimeoSquarePlayer';
-import styles from './glidelooper.module.css';
 
 export default function GlideLooperPage() {
   const actions = (
-    <>
-      <Button asChild variant="primary">
-        <a href="#" onClick={e => e.preventDefault()}>
-          <Download size={16} /> Get on itch.io
-        </a>
-      </Button>
-      <Button asChild variant="outline">
-        <a href="#" onClick={e => e.preventDefault()}>
-          <ShoppingBag size={16} /> Microsoft Store
-        </a>
-      </Button>
-    </>
+    <Button asChild variant="primary">
+      <a href="https://kajdep.itch.io/glidelooper" target="_blank" rel="noopener noreferrer">
+        <Download size={16} /> Get on itch.io
+      </a>
+    </Button>
   );
 
   return (
     <>
       <Helmet>
         <title>GlideLooper | Glide Video Tools</title>
-        <meta name="description" content="Create perfectly seamless video loops from any clip. Ideal for social media, backgrounds, and motion design. Available on itch.io and Microsoft Store." />
+        <meta name="description" content="Preview-first loop builder for desktop. Pick the seam visually, choose an FFmpeg xfade transition, extend the result to a target length, and save seamless loops locally." />
         <link rel="canonical" href="https://www.glidevideo.com/glidelooper" />
         <meta property="og:title" content="GlideLooper | Glide Video Tools" />
-        <meta property="og:description" content="Create perfectly seamless video loops from any clip. Ideal for social media, backgrounds, and motion design. Available on itch.io and Microsoft Store." />
+        <meta property="og:description" content="Preview-first loop builder for desktop. Pick the seam visually, choose an FFmpeg xfade transition, extend the result to a target length, and save seamless loops locally." />
         <meta property="og:url" content="https://www.glidevideo.com/glidelooper" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Glide Video Tools" />
       </Helmet>
       <ProductLayout
         name="GlideLooper"
-        tagline="Seamless Video Loops, Perfected"
-        description="Create perfectly seamless loops from any video clip. Ideal for social media, backgrounds, and motion design projects that require continuous playback."
+        tagline="Preview-First Seamless Loop Building"
+        description="GlideLooper turns one forward-moving clip into a longer seamless loop. Choose the seam from a live frame preview, dial in the transition style and duration, then render and review the loop before you save it."
         mediaContent={<VimeoSquarePlayer videoId="1177452495" />}
         features={[
-          "Automatic loop detection",
-          "Frame-perfect transitions",
-          "Multiple export options",
-          "Real-time preview rendering"
+          "Visual seam picker with live frame preview",
+          "Built-in FFmpeg xfade transition styles",
+          "Adjustable transition duration and target loop length",
+          "Render inside the app, then save only when the seam looks right"
         ]}
         primaryColor="var(--secondary)"
         primaryForegroundColor="var(--secondary-foreground)"

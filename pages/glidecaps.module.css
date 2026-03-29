@@ -22,13 +22,13 @@
   margin-bottom: var(--spacing-10);
 }
 
-.logoWrapper {
+.iconWrapper {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: min(100%, 320px);
-  aspect-ratio: 1 / 1;
+  width: 120px;
+  height: 120px;
   margin-bottom: var(--spacing-6);
 }
 
@@ -39,7 +39,7 @@
   transform: translate(-50%, -50%);
   width: 150%;
   height: 150%;
-  background: radial-gradient(circle, color-mix(in srgb, var(--warning) 30%, transparent) 0%, transparent 60%);
+  background: radial-gradient(circle, color-mix(in srgb, var(--primary) 35%, transparent) 0%, transparent 60%);
   filter: blur(20px);
   z-index: 0;
   animation: pulseGlow 4s ease-in-out infinite;
@@ -60,15 +60,10 @@
   }
 }
 
-.logoImage {
+.icon {
   position: relative;
   z-index: 1;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  border-radius: calc(var(--radius-lg) * 1.25);
-  border: 1px solid color-mix(in srgb, var(--warning) 14%, transparent);
-  box-shadow: var(--shadow-lg);
+  color: var(--primary);
 }
 
 .badge {
@@ -88,7 +83,7 @@
 
 .tagline {
   font-size: 1.25rem;
-  color: var(--warning);
+  color: var(--primary);
   font-weight: 500;
   margin-bottom: var(--spacing-6);
 }
@@ -151,7 +146,7 @@
 }
 
 .checkIcon {
-  color: var(--warning);
+  color: var(--primary);
   flex-shrink: 0;
 }
 
@@ -181,8 +176,8 @@
 }
 
 .input:focus {
-  border-color: var(--warning);
-  box-shadow: 0 0 0 1px color-mix(in srgb, var(--warning) 30%, transparent);
+  border-color: var(--primary);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--primary) 30%, transparent);
 }
 
 .input::placeholder {

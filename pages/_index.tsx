@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { toast } from 'sonner';
 import { useSubscribe } from '../helpers/useSubscribe';
 import { Helmet } from 'react-helmet';
-import { FileVideo, Repeat, Blend, Cpu, ArrowRight, Scissors, Smartphone, ExternalLink, ChevronDown, Feather, ShieldCheck } from 'lucide-react';
+import { FileVideo, Repeat, Blend, Cpu, ArrowRight, Scissors, Smartphone, Captions, ExternalLink, ChevronDown, Feather, ShieldCheck } from 'lucide-react';
 import { Button } from '../components/Button';
 import { Input } from '../components/Input';
 import { Badge } from '../components/Badge';
@@ -37,10 +37,10 @@ export default function IndexPage() {
       <div className={styles.container}>
         <Helmet>
           <title>Glide Video Tools | The Video Toolkit That Moves With You</title>
-          <meta name="description" content="Professional video tools that run on your computer. Convert, loop, blend, and prepare videos locally — fast, secure, and private. No cloud uploads needed." />
+          <meta name="description" content="Professional video tools that run on your computer. Convert, loop, blend, caption, and prepare videos locally — fast, secure, and private. No cloud uploads needed." />
           <link rel="canonical" href="https://www.glidevideo.com/" />
           <meta property="og:title" content="Glide Video Tools | The Video Toolkit That Moves With You" />
-          <meta property="og:description" content="Professional video tools that run on your computer. Convert, loop, blend, and prepare videos locally — fast, secure, and private. No cloud uploads needed." />
+          <meta property="og:description" content="Professional video tools that run on your computer. Convert, loop, blend, caption, and prepare videos locally — fast, secure, and private. No cloud uploads needed." />
           <meta property="og:url" content="https://www.glidevideo.com/" />
           <meta property="og:type" content="website" />
           <meta property="og:site_name" content="Glide Video Tools" />
@@ -50,7 +50,7 @@ export default function IndexPage() {
           <div className={styles.heroContent}>
             <h1 className={styles.heroTitle}>Video Tools That Run On Your Computer</h1>
             <p className={styles.heroSubtitle}>
-              Get your quick video tasks done in no time. Avoid cloud based processing. Quick and secure.
+              Focused utilities for cleaning footage, converting formats, building loops, creating captions, and packaging short-form video without sending your media to a cloud editor.
             </p>
             <div className={styles.heroActions}>
               <Button asChild size="lg" className={styles.mainCta}>
@@ -63,8 +63,8 @@ export default function IndexPage() {
                   </a>
                 </Button>
                 <Button asChild variant="ghost" size="sm" className={styles.glassPill}>
-                  <a href="#" target="_blank" rel="noopener noreferrer">
-                    Microsoft Store <ExternalLink size={14} />
+                  <a href="https://glideblend.com" target="_blank" rel="noopener noreferrer">
+                    Open GlideBlend Web App <ExternalLink size={14} />
                   </a>
                 </Button>
               </div>
@@ -79,7 +79,7 @@ export default function IndexPage() {
         <section id="tools" className={styles.toolsSection}>
           <div className={styles.sectionHeader}>
             <h2 className={styles.sectionTitle}>The Suite</h2>
-            <p className={styles.sectionSubtitle}>Professional tools. Zero friction.</p>
+            <p className={styles.sectionSubtitle}>Focused tools. Local-first workflow.</p>
           </div>
           
           <div className={styles.toolsGrid}>
@@ -93,12 +93,12 @@ export default function IndexPage() {
                 <FileVideo size={32} />
               </div>
               <h3 className={styles.toolName}>GlideConvert</h3>
-              <p className={styles.toolDescription}>Lightning-fast video format conversion. MP4, MOV, WEBM and more.</p>
+              <p className={styles.toolDescription}>Convert video locally with platform-ready MP4 presets for YouTube, TikTok, Instagram, Android, WhatsApp, and more.</p>
               <div className={styles.toolFooter}>
                 <span className={styles.learnMore}>Learn More <ArrowRight size={14} /></span>
                 <div className={styles.platforms}>
                   <Badge variant="outline" className={styles.glassBadge}>itch.io</Badge>
-                  <Badge variant="outline" className={styles.glassBadge}>MS Store</Badge>
+                  <Badge variant="outline" className={styles.glassBadge}>Desktop App</Badge>
                 </div>
               </div>
             </Link>
@@ -113,12 +113,12 @@ export default function IndexPage() {
                 <Repeat size={32} />
               </div>
               <h3 className={styles.toolName}>GlideLooper</h3>
-              <p className={styles.toolDescription}>Create perfect seamless loops from any video clip effortlessly.</p>
+              <p className={styles.toolDescription}>Pick a seam visually, choose an FFmpeg xfade transition, and build longer seamless loops from one clip.</p>
               <div className={styles.toolFooter}>
                 <span className={styles.learnMore}>Learn More <ArrowRight size={14} /></span>
                 <div className={styles.platforms}>
                   <Badge variant="outline" className={styles.glassBadge}>itch.io</Badge>
-                  <Badge variant="outline" className={styles.glassBadge}>MS Store</Badge>
+                  <Badge variant="outline" className={styles.glassBadge}>Desktop App</Badge>
                 </div>
               </div>
             </Link>
@@ -133,7 +133,7 @@ export default function IndexPage() {
                 <Blend size={32} />
               </div>
               <h3 className={styles.toolName}>GlideBlend</h3>
-              <p className={styles.toolDescription}>Merge AI-generated videos with pixel-perfect transitions using perceptual hashing.</p>
+              <p className={styles.toolDescription}>Stitch clips at their best visual match with perceptual hashing and browser-based FFmpeg processing.</p>
               <div className={styles.toolFooter}>
                 <span className={styles.learnMore}>Learn More <ArrowRight size={14} /></span>
                 <div className={styles.platforms}>
@@ -144,22 +144,28 @@ export default function IndexPage() {
             </Link>
 
             {/* GlidePrep Card */}
-            <div 
-              className={`${styles.toolCard} ${styles.comingSoonCard}`}
+            <Link
+              to="/glideprep"
+              className={styles.toolCard}
               style={{ '--card-glow': 'var(--success)', '--tool-color': 'var(--success)' } as React.CSSProperties}
             >
-              <div className={styles.toolHeaderRow}>
-                <div className={styles.toolIconWrapper} style={{ color: 'var(--tool-color)' }}>
-                  <Scissors size={32} />
-                </div>
-                <Badge variant="outline" className={`${styles.glassBadge} ${styles.comingSoonBadge}`}>Coming Soon</Badge>
+              <div className={styles.toolIconWrapper} style={{ color: 'var(--tool-color)' }}>
+                <Scissors size={32} />
               </div>
               <h3 className={styles.toolName}>GlidePrep</h3>
-              <p className={styles.toolDescription}>Trim, crop, and prepare your video clips for any pipeline.</p>
-            </div>
+              <p className={styles.toolDescription}>Clean clips by trimming dead edges and reframing them for vertical, square, portrait, or widescreen delivery.</p>
+              <div className={styles.toolFooter}>
+                <span className={styles.learnMore}>Learn More <ArrowRight size={14} /></span>
+                <div className={styles.platforms}>
+                  <Badge variant="outline" className={styles.glassBadge}>itch.io</Badge>
+                  <Badge variant="outline" className={styles.glassBadge}>Desktop App</Badge>
+                </div>
+              </div>
+            </Link>
 
             {/* GlideShorts Card */}
-            <div 
+            <Link
+              to="/glideshorts"
               className={`${styles.toolCard} ${styles.comingSoonCard}`}
               style={{ '--card-glow': 'var(--warning)', '--tool-color': 'var(--warning)' } as React.CSSProperties}
             >
@@ -170,8 +176,36 @@ export default function IndexPage() {
                 <Badge variant="outline" className={`${styles.glassBadge} ${styles.comingSoonBadge}`}>Coming Soon</Badge>
               </div>
               <h3 className={styles.toolName}>GlideShorts</h3>
-              <p className={styles.toolDescription}>Automatically transform long-form video into engaging short-form content.</p>
-            </div>
+              <p className={styles.toolDescription}>Find likely highlights, review them, and turn long-form video into platform-ready short clips.</p>
+              <div className={styles.toolFooter}>
+                <span className={styles.learnMore}>Learn More <ArrowRight size={14} /></span>
+                <div className={styles.platforms}>
+                  <Badge variant="outline" className={styles.glassBadge}>Coming Soon</Badge>
+                </div>
+              </div>
+            </Link>
+
+            {/* GlideCaps Card */}
+            <Link
+              to="/glidecaps"
+              className={`${styles.toolCard} ${styles.comingSoonCard}`}
+              style={{ '--card-glow': 'var(--primary)', '--tool-color': 'var(--primary)' } as React.CSSProperties}
+            >
+              <div className={styles.toolHeaderRow}>
+                <div className={styles.toolIconWrapper} style={{ color: 'var(--tool-color)' }}>
+                  <Captions size={32} />
+                </div>
+                <Badge variant="outline" className={`${styles.glassBadge} ${styles.comingSoonBadge}`}>Coming Soon</Badge>
+              </div>
+              <h3 className={styles.toolName}>GlideCaps</h3>
+              <p className={styles.toolDescription}>Generate, edit, and export captions locally for tutorials, client deliverables, and short-form clips.</p>
+              <div className={styles.toolFooter}>
+                <span className={styles.learnMore}>Learn More <ArrowRight size={14} /></span>
+                <div className={styles.platforms}>
+                  <Badge variant="outline" className={styles.glassBadge}>Coming Soon</Badge>
+                </div>
+              </div>
+            </Link>
           </div>
         </section>
 

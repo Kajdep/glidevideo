@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { LayoutDashboard, FileVideo, Repeat, Blend, Scissors, Smartphone } from 'lucide-react';
+import { LayoutDashboard, FileVideo, Repeat, Blend, Scissors, Smartphone, Captions } from 'lucide-react';
 import styles from './SharedLayout.module.css';
 
 export default function SharedLayout({ children }: { children: React.ReactNode }) {
@@ -13,6 +13,7 @@ export default function SharedLayout({ children }: { children: React.ReactNode }
     { path: '/glideblend', label: 'GlideBlend', icon: Blend },
     { path: '/glideprep', label: 'GlidePrep', icon: Scissors },
     { path: '/glideshorts', label: 'GlideShorts', icon: Smartphone },
+    { path: '/glidecaps', label: 'GlideCaps', icon: Captions },
   ];
 
   return (
@@ -59,6 +60,7 @@ export default function SharedLayout({ children }: { children: React.ReactNode }
             <Link to="/glideblend">GlideBlend</Link>
             <Link to="/glideprep">GlidePrep</Link>
             <Link to="/glideshorts">GlideShorts</Link>
+            <Link to="/glidecaps">GlideCaps</Link>
           </div>
         </div>
         <div className={styles.footerBottom}>
