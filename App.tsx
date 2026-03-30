@@ -108,6 +108,7 @@ function NotFound() {
 }
 
 import { useLocation, useNavigationType } from "react-router-dom";
+import AppHead from "./pages/_app.jsx";
 
 export default function ScrollManager() {
   const { pathname, search, hash } = useLocation();
@@ -129,6 +130,7 @@ export default function ScrollManager() {
 export function App() {
   return (
     <BrowserRouter>
+      <AppHead />
       <ScrollManager />
       <GlobalContextProviders>
         <Routes>
