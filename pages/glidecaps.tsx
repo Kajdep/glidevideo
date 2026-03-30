@@ -41,7 +41,7 @@ export default function GlideCapsPage() {
       <Helmet>
         <title>GlideCaps | Coming Soon - Glide Video Tools</title>
         <meta name="description" content="Coming soon — GlideCaps is planned as a local-first captioning tool for generating, editing, styling, and exporting subtitles without moving your source footage into a cloud editor." />
-        <link rel="canonical" href="https://www.glidevideo.com/glidecaps" />
+
         <meta property="og:title" content="GlideCaps | Coming Soon - Glide Video Tools" />
         <meta property="og:description" content="Coming soon — GlideCaps is planned as a local-first captioning tool for generating, editing, styling, and exporting subtitles without moving your source footage into a cloud editor." />
         <meta property="og:url" content="https://www.glidevideo.com/glidecaps" />

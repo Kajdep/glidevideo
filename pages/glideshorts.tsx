@@ -44,7 +44,7 @@ export default function GlideShortsPage() {
       <Helmet>
         <title>GlideShorts | Coming Soon - Glide Video Tools</title>
         <meta name="description" content="Coming soon — GlideShorts is planned as a review-first short-form tool that finds likely highlight moments, lets you refine them, and exports platform-ready clips for Shorts, Reels, and TikTok." />
-        <link rel="canonical" href="https://www.glidevideo.com/glideshorts" />
+
         <meta property="og:title" content="GlideShorts | Coming Soon - Glide Video Tools" />
         <meta property="og:description" content="Coming soon — GlideShorts is planned as a review-first short-form tool that finds likely highlight moments, lets you refine them, and exports platform-ready clips for Shorts, Reels, and TikTok." />
         <meta property="og:url" content="https://www.glidevideo.com/glideshorts" />
