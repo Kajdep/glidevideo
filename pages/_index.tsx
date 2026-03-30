@@ -38,7 +38,7 @@ export default function IndexPage() {
         <Helmet>
           <title>Glide Video Tools | The Video Toolkit That Moves With You</title>
           <meta name="description" content="Professional video tools that run on your computer. Convert, loop, blend, caption, and prepare videos locally — fast, secure, and private. No cloud uploads needed." />
-          <link rel="canonical" href="https://www.glidevideo.com/" />
+
           <meta property="og:title" content="Glide Video Tools | The Video Toolkit That Moves With You" />
           <meta property="og:description" content="Professional video tools that run on your computer. Convert, loop, blend, caption, and prepare videos locally — fast, secure, and private. No cloud uploads needed." />
           <meta property="og:url" content="https://www.glidevideo.com/" />
