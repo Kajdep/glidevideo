@@ -26,7 +26,7 @@ export default function GlideBlendPage() {
       <Helmet>
         <title>GlideBlend | Glide Video Tools</title>
         <meta name="description" content="Merge AI-generated videos seamlessly using perceptual hash matching. All processing happens in your browser. Try the web app or get it on itch.io." />
-        <link rel="canonical" href="https://www.glidevideo.com/glideblend" />
+
         <meta property="og:title" content="GlideBlend | Glide Video Tools" />
         <meta property="og:description" content="Merge AI-generated videos seamlessly using perceptual hash matching. All processing happens in your browser. Try the web app or get it on itch.io." />
         <meta property="og:url" content="https://www.glidevideo.com/glideblend" />
