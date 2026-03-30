@@ -15,6 +15,7 @@ export default defineConfig(() => ({
     }),
     react(),
   ],
+  publicDir: "static",
   build: {
     assetsDir: "_assets",
   },

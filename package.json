@@ -1,5 +1,10 @@
 {
   "type": "module",
+  "scripts": {
+    "build": "tsx scripts/generate-sitemap.ts && vite build",
+    "dev": "vite",
+    "start": "tsx server.ts"
+  },
   "dependencies": {
     "kysely": "0.26.3",
     "nanoid": "5.1.7",
