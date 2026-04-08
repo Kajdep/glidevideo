@@ -39,7 +39,11 @@
   transform: translate(-50%, -50%);
   width: 150%;
   height: 150%;
-  background: radial-gradient(circle, color-mix(in srgb, var(--warning) 30%, transparent) 0%, transparent 60%);
+  background: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--warning) 30%, transparent) 0%,
+    transparent 60%
+  );
   filter: blur(20px);
   z-index: 0;
   animation: pulseGlow 4s ease-in-out infinite;
@@ -202,26 +206,4 @@
 
 .backLink:hover {
   color: var(--foreground);
-}
-
-@media (max-width: 640px) {
-  .container {
-    padding: var(--spacing-12) var(--spacing-4);
-  }
-
-  .title {
-    font-size: 2.5rem;
-  }
-
-  .featuresSection {
-    padding: var(--spacing-6);
-  }
-
-  .featureItem {
-    align-items: flex-start;
-  }
-
-  .form {
-    flex-direction: column;
-  }
 }

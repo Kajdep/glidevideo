@@ -2,14 +2,8 @@ import "./loadEnv.js";
 import { Hono } from 'hono'
 import { serveStatic } from '@hono/node-server/serve-static'
 import { serve } from '@hono/node-server';
-import { generateSitemap } from './generateSitemap.js';
 
 const app = new Hono();
-
-app.get('/sitemap.xml', (c) => {
-  const xml = generateSitemap();
-  return c.body(xml, 200, { 'Content-Type': 'application/xml' });
-});
 
 app.post('_api/subscribe',async c => {
   try {
