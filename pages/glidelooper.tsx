@@ -1,28 +1,28 @@
-import React from 'react';
-import { Helmet } from 'react-helmet';
-import { Download } from 'lucide-react';
-import { Button } from '../components/Button';
-import { ProductLayout } from '../components/ProductLayout';
-import { VimeoSquarePlayer } from '../components/VimeoSquarePlayer';
+import React from "react";
+import { Helmet } from "react-helmet";
+import { ProductLayout } from "../components/ProductLayout";
+import { ProductStoreActions } from "../components/ProductStoreActions";
+import { VimeoSquarePlayer } from "../components/VimeoSquarePlayer";
 
 export default function GlideLooperPage() {
-  const actions = (
-    <Button asChild variant="primary">
-      <a href="https://kajdep.itch.io/glidelooper" target="_blank" rel="noopener noreferrer">
-        <Download size={16} /> Get on itch.io
-      </a>
-    </Button>
-  );
-
   return (
     <>
       <Helmet>
         <title>GlideLooper | Glide Video Tools</title>
-        <meta name="description" content="Preview-first loop builder for desktop. Pick the seam visually, choose an FFmpeg xfade transition, extend the result to a target length, and save seamless loops locally." />
-
+        <meta
+          name="description"
+          content="Preview-first loop builder for desktop. Pick the seam visually, choose an FFmpeg xfade transition, extend the result to a target length, and save seamless loops locally."
+        />
+        <link rel="canonical" href="https://www.glidevideo.com/glidelooper" />
         <meta property="og:title" content="GlideLooper | Glide Video Tools" />
-        <meta property="og:description" content="Preview-first loop builder for desktop. Pick the seam visually, choose an FFmpeg xfade transition, extend the result to a target length, and save seamless loops locally." />
-        <meta property="og:url" content="https://www.glidevideo.com/glidelooper" />
+        <meta
+          property="og:description"
+          content="Preview-first loop builder for desktop. Pick the seam visually, choose an FFmpeg xfade transition, extend the result to a target length, and save seamless loops locally."
+        />
+        <meta
+          property="og:url"
+          content="https://www.glidevideo.com/glidelooper"
+        />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Glide Video Tools" />
       </Helmet>
@@ -35,11 +35,17 @@ export default function GlideLooperPage() {
           "Visual seam picker with live frame preview",
           "Built-in FFmpeg xfade transition styles",
           "Adjustable transition duration and target loop length",
-          "Render inside the app, then save only when the seam looks right"
+          "Render inside the app, then save only when the seam looks right",
         ]}
         primaryColor="var(--secondary)"
         primaryForegroundColor="var(--secondary-foreground)"
-        actions={actions}
+        actions={
+          <ProductStoreActions
+            productId="glidelooper"
+            microsoftStoreUrl="https://apps.microsoft.com/detail/9NB6W2SWLFHJ"
+            itchUrl="https://kajdep.itch.io/glidelooper"
+          />
+        }
       />
     </>
   );

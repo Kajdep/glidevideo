@@ -1,3 +1,3 @@
-import SharedLayout from '../components/SharedLayout';
+import SharedLayout from "../components/SharedLayout";
 
 export default [SharedLayout];

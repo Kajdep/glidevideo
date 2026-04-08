@@ -1,5 +1,11 @@
 import React, { useEffect } from "react";
-import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Outlet,
+  useLocation,
+} from "react-router-dom";
 import { GlobalContextProviders } from "./components/_globalContextProviders";
 import Page_0 from "./pages/_index.tsx";
 import PageLayout_0 from "./pages/_index.pageLayout.tsx";
@@ -15,6 +21,8 @@ import Page_5 from "./pages/glideconvert.tsx";
 import PageLayout_5 from "./pages/glideconvert.pageLayout.tsx";
 import Page_6 from "./pages/glidecaps.tsx";
 import PageLayout_6 from "./pages/glidecaps.pageLayout.tsx";
+import Page_7 from "./pages/glideaudio.tsx";
+import PageLayout_7 from "./pages/glideaudio.pageLayout.tsx";
 
 if (!window.requestIdleCallback) {
   window.requestIdleCallback = (cb) => {
@@ -24,7 +32,7 @@ if (!window.requestIdleCallback) {
 
 import "./base.css";
 
-const fileNameToRoute = new Map([["./pages/_index.tsx","/"],["./pages/glideprep.tsx","/glideprep"],["./pages/glideblend.tsx","/glideblend"],["./pages/glidelooper.tsx","/glidelooper"],["./pages/glideshorts.tsx","/glideshorts"],["./pages/glideconvert.tsx","/glideconvert"],["./pages/glidecaps.tsx","/glidecaps"]]);
+const fileNameToRoute = new Map([["./pages/_index.tsx","/"],["./pages/glideprep.tsx","/glideprep"],["./pages/glideblend.tsx","/glideblend"],["./pages/glidelooper.tsx","/glidelooper"],["./pages/glideshorts.tsx","/glideshorts"],["./pages/glideconvert.tsx","/glideconvert"],["./pages/glidecaps.tsx","/glidecaps"],["./pages/glideaudio.tsx","/glideaudio"]]);
 const fileNameToComponent = new Map([
     ["./pages/_index.tsx", Page_0],
 ["./pages/glideprep.tsx", Page_1],
@@ -33,6 +41,7 @@ const fileNameToComponent = new Map([
 ["./pages/glideshorts.tsx", Page_4],
 ["./pages/glideconvert.tsx", Page_5],
 ["./pages/glidecaps.tsx", Page_6],
+["./pages/glideaudio.tsx", Page_7],
   ]);
 
 function makePageRoute(filename: string) {
@@ -108,7 +117,6 @@ function NotFound() {
 }
 
 import { useLocation, useNavigationType } from "react-router-dom";
-import AppHead from "./pages/_app.jsx";
 
 export default function ScrollManager() {
   const { pathname, search, hash } = useLocation();
@@ -127,11 +135,27 @@ export default function ScrollManager() {
   return null;
 }
 
+declare global {
+  interface Window {
+    createLemonSqueezy?: () => void;
+  }
+}
+
+function LemonSqueezyInitializer() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.createLemonSqueezy?.();
+  }, [pathname]);
+
+  return null;
+}
+
 export function App() {
   return (
     <BrowserRouter>
-      <AppHead />
       <ScrollManager />
+      <LemonSqueezyInitializer />
       <GlobalContextProviders>
         <Routes>
           {toElement({ trie: buildLayoutTrie({
@@ -142,6 +166,7 @@ export function App() {
 "./pages/glideshorts.tsx": PageLayout_4,
 "./pages/glideconvert.tsx": PageLayout_5,
 "./pages/glidecaps.tsx": PageLayout_6,
+"./pages/glideaudio.tsx": PageLayout_7,
 }), fileNameToRoute, makePageRoute })} 
           <Route path="*" element={<NotFound />} />
         </Routes>

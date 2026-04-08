@@ -23,6 +23,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: var(--spacing-4) var(--spacing-8);
+  flex-wrap: wrap;
 }
 
 .logoLink {
@@ -38,9 +40,9 @@
 
 .nav {
   display: flex;
+  gap: var(--spacing-3) var(--spacing-5);
   flex-wrap: wrap;
   justify-content: flex-end;
-  gap: var(--spacing-6);
 }
 
 .navLink {
@@ -60,6 +62,14 @@
 }
 
 .navLink.active {
+  color: var(--primary);
+}
+
+.shopLink {
+  color: var(--foreground);
+}
+
+.shopLink:hover {
   color: var(--primary);
 }
 
@@ -135,7 +145,6 @@
     gap: var(--spacing-4);
   }
   .nav {
-    flex-wrap: wrap;
     justify-content: center;
     gap: var(--spacing-4);
   }

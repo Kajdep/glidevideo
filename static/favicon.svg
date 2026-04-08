@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="glide-gradient" x1="10" y1="8" x2="54" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8B5CF6" />
+      <stop offset="0.5" stop-color="#3B82F6" />
+      <stop offset="1" stop-color="#22D3EE" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="18" fill="#09090B" />
+  <path
+    d="M19 18.5C19 16.0147 21.0147 14 23.5 14H39.5C45.299 14 50 18.701 50 24.5C50 30.299 45.299 35 39.5 35H29.5C28.1193 35 27 36.1193 27 37.5C27 38.8807 28.1193 40 29.5 40H45V50H29.5C22.5964 50 17 44.4036 17 37.5C17 30.5964 22.5964 25 29.5 25H39.5C39.7761 25 40 24.7761 40 24.5C40 24.2239 39.7761 24 39.5 24H19V18.5Z"
+    fill="url(#glide-gradient)"
+  />
+</svg>

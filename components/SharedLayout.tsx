@@ -1,6 +1,17 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { LayoutDashboard, FileVideo, Repeat, Blend, Scissors, Smartphone, Captions } from 'lucide-react';
+import {
+  LayoutDashboard,
+  FileVideo,
+  Repeat,
+  Blend,
+  Scissors,
+  Smartphone,
+  Captions,
+  Volume2,
+  ShoppingBag,
+  ExternalLink,
+} from 'lucide-react';
 import styles from './SharedLayout.module.css';
 
 export default function SharedLayout({ children }: { children: React.ReactNode }) {
@@ -14,6 +25,7 @@ export default function SharedLayout({ children }: { children: React.ReactNode }
     { path: '/glideprep', label: 'GlidePrep', icon: Scissors },
     { path: '/glideshorts', label: 'GlideShorts', icon: Smartphone },
     { path: '/glidecaps', label: 'GlideCaps', icon: Captions },
+    { path: '/glideaudio', label: 'GlideAudio', icon: Volume2 },
   ];
 
   return (
@@ -38,6 +50,16 @@ export default function SharedLayout({ children }: { children: React.ReactNode }
                 <span>{item.label}</span>
               </Link>
             ))}
+            <a
+              href="https://shop.glidevideo.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${styles.navLink} ${styles.shopLink}`}
+            >
+              <ShoppingBag size={16} />
+              <span>Shop</span>
+              <ExternalLink size={14} />
+            </a>
           </nav>
         </div>
       </header>
@@ -61,6 +83,14 @@ export default function SharedLayout({ children }: { children: React.ReactNode }
             <Link to="/glideprep">GlidePrep</Link>
             <Link to="/glideshorts">GlideShorts</Link>
             <Link to="/glidecaps">GlideCaps</Link>
+            <Link to="/glideaudio">GlideAudio</Link>
+            <a
+              href="https://shop.glidevideo.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Shop
+            </a>
           </div>
         </div>
         <div className={styles.footerBottom}>
