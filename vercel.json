@@ -2,6 +2,6 @@
   "buildCommand": "pnpm run build",
   "outputDirectory": "dist",
   "rewrites": [
-    { "source": "/((?!.*\\.(xml|txt|json|js|css|png|jpg|jpeg|svg|ico|webp|woff|woff2|ttf|eot)$).*)", "destination": "/index.html" }
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
