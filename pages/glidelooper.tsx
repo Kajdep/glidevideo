@@ -19,7 +19,7 @@ export default function GlideLooperPage() {
       <Helmet>
         <title>GlideLooper | Glide Video Tools</title>
         <meta name="description" content="Preview-first loop builder for desktop. Pick the seam visually, choose an FFmpeg xfade transition, extend the result to a target length, and save seamless loops locally." />
-        <link rel="canonical" href="https://www.glidevideo.com/glidelooper" />
+
         <meta property="og:title" content="GlideLooper | Glide Video Tools" />
         <meta property="og:description" content="Preview-first loop builder for desktop. Pick the seam visually, choose an FFmpeg xfade transition, extend the result to a target length, and save seamless loops locally." />
         <meta property="og:url" content="https://www.glidevideo.com/glidelooper" />

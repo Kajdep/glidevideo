@@ -20,7 +20,7 @@ export default function GlidePrepPage() {
       <Helmet>
         <title>GlidePrep | Glide Video Tools</title>
         <meta name="description" content="Clean clips before the rest of your workflow. GlidePrep detects black or frozen edges, lets you trim precisely, reframe for social and widescreen formats, and export locally." />
-        <link rel="canonical" href="https://www.glidevideo.com/glideprep" />
+
         <meta property="og:title" content="GlidePrep | Glide Video Tools" />
         <meta property="og:description" content="Clean clips before the rest of your workflow. GlidePrep detects black or frozen edges, lets you trim precisely, reframe for social and widescreen formats, and export locally." />
         <meta property="og:url" content="https://www.glidevideo.com/glideprep" />

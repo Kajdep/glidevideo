@@ -19,7 +19,7 @@ export default function GlideConvertPage() {
       <Helmet>
         <title>GlideConvert | Glide Video Tools</title>
         <meta name="description" content="Desktop video conversion with platform-ready MP4 presets for YouTube, TikTok, Instagram, Android, WhatsApp, and more. Batch friendly, drag and drop, and fully local." />
-        <link rel="canonical" href="https://www.glidevideo.com/glideconvert" />
+
         <meta property="og:title" content="GlideConvert | Glide Video Tools" />
         <meta property="og:description" content="Desktop video conversion with platform-ready MP4 presets for YouTube, TikTok, Instagram, Android, WhatsApp, and more. Batch friendly, drag and drop, and fully local." />
         <meta property="og:url" content="https://www.glidevideo.com/glideconvert" />
